@@ -1,3 +1,6 @@
 go 1.21.1
 
-use ./numero_aleatorio_entre_0_y_100
+use (
+    ./Crear_Modulo\Import_Modulo/greetings
+    ./Crear_Modulo\Import_Modulo/Hello
+)
