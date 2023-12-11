@@ -15,7 +15,7 @@ func main() {
 
 	// se llama la funcion Hello del modulo greetings y se guarda su devolucion en la variable message , la funcion hello 
 	// del modulo greetings devuelve un mje y un error , por eso es una variable para guardar el mje y otra para el error 
-	message, err1 := greetings.Hello("")
+	message, err1 := greetings.Hello("alex")
 	ale, err2  := greetings.Hello("Pepe")
 
 	// manejamos el error , en caso de existir , detenemos la app y mostramos el error 
