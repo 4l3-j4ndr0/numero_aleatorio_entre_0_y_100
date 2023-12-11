@@ -25,4 +25,17 @@ func main() {
 	}
 	fmt.Println(message)
 	fmt.Println(ale)
+
+	fmt.Println("############################################################")
+
+	names := []string {
+		"Alex", "Juan", "María", "Lucas","claudia","Alejandra",
+	} 
+
+	messages,err := greetings.Hellos(names)
+		if err != nil {
+			log.Fatal(err)
+		}
+	fmt.Println(messages)
+
 }
