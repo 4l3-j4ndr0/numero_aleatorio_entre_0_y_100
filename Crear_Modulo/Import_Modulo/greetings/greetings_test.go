@@ -1,0 +1,23 @@
+package greetings
+
+import (
+	"regexp"
+	"testing"
+)
+
+func TestHelloName(t *testing.T) {
+	name := "Juan"
+	want := regexp.MustCompile(`\b` + name + `\b`)
+	msg,err := Hello("Juan")
+
+	if !want.MatchString(msg) || err != nil {
+		t.Fatalf(`Hello("Juan") = %q, %v, want %q`, msg, err, name)
+	}
+}
+
+func TestHelloEmpty(t *testing.T){
+	msg,err := Hello("")
+	if msg != "" || err==nil {
+		t.Fatalf(`Hello("") = %q, %v, quiere "", error`, msg,err)
+	}
+}
